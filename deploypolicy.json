@@ -1,0 +1,30 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Stmt1432812345671",
+            "Effect": "Allow",
+            "Action": [
+                "lambda:GetFunction",
+                "lambda:CreateFunction",
+                "lambda:UpdateFunctionCode",
+                "lambda:UpdateFunctionConfiguration"
+            ],
+            "Resource": [
+                "arn:aws:lambda:us-east-1:788394550951:function:Function1",
+                "arn:aws:lambda:us-east-1:788394550951:function:Function2"
+            ]
+        },
+        {
+            "Sid": "Stmt14328112345672",
+            "Effect": "Allow",
+            "Action": [
+                "iam:Passrole"
+            ],
+            "Resource": [
+                "arn:aws:iam::788394550951:role/InvokeOtherLambdaRole",
+                "arn:aws:iam::788394550951:role/service-role/Function2-role-2a0nk9ms"
+            ]
+        }
+    ]
+}
